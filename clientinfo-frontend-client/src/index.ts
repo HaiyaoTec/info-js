@@ -1,4 +1,4 @@
-import ClientInfoInstanceFactory from './moduel/ClientInfoInstanceFactory'
+import ClientInfoInstanceFactory from './module/ClientInfoInstanceFactory'
 export {ClientInfoInstanceFactory}
 
 
