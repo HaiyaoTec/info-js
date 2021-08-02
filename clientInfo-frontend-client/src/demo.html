@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+    console.log(returnCitySN)
+
+    document.writeln("当前IP地址：" + returnCitySN['cip'] + "<br/><br/>");
+    document.writeln("当前地址：" + returnCitySN['cname']);
+</script>
+
+</body>
+</html>
