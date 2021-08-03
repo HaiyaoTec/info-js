@@ -32,3 +32,8 @@ console.log(ClientInfoInstanceFactory.getInstance().language)//zh-cn
 console.log(ClientInfoInstanceFactory.getInstance().screenResolution)//1080*1920
 console.log(ClientInfoInstanceFactory.getInstance().isMobileDevice)//false
 ```
+## Future
+* 浏览器指纹
+* 用户ip地址
+* 用户所在国家
+* 项目运行的环境类型（prod beat ）
