@@ -2,8 +2,10 @@
 更方便的获取客户端信息
 
 ## Install
-```ts
-import {ClientInfoInstanceFactory} from '@imf/ClientInfo'
+```shell
+npm install @imf/ClientInfo --save
+
+yarn add @imf/ClientInfo
 ```
 
 ## Start
