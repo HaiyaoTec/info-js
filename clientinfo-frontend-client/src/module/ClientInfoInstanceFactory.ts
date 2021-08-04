@@ -1,5 +1,5 @@
 import ClientInfo from '../domain/ClientInfo'
-import ClientInfoExtension from "../domain/ClientInfoExtension";
+import ClientExtension from "../domain/ClientExtension";
 
 class ClientInfoInstanceFactory {
 
@@ -7,16 +7,16 @@ class ClientInfoInstanceFactory {
     public static clientInfoInstance = new ClientInfo();
 
     //创建 clientInfoInstanceExtensionInstance的一个对象
-    public static clientInfoExtensionInstance = new ClientInfoExtension();
+    public static clientExtensionInstance = new ClientExtension();
 
     //获取客户端信息对象实例
     public static getClientInfoInstance(): ClientInfo {
         return this.clientInfoInstance;
     }
-    
+
     //获取客户端扩展信息对象实例
-    public static getClientInfoExtensionInstance(): ClientInfoExtension {
-        return this.clientInfoExtensionInstance;
+    public static getClientExtensionInstance(): ClientExtension {
+        return this.clientExtensionInstance;
     }
 }
 

@@ -9,7 +9,9 @@ console.log(window.clientInfo.appVersion)
 console.log(window.clientInfo.platform)
 console.log(window.clientInfo.language)
 console.log(window.clientInfo.screenResolution)
-console.log(window.clientInfo.isMobileDevice)
+console.log(window.clientExtension.language)
+window.clientExtension.language='zh-cn'
+
 
 
 

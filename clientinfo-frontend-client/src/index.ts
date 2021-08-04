@@ -1,14 +1,14 @@
 import ClientInfoInstanceFactory from './module/ClientInfoInstanceFactory'
 import ClientInfo from "./domain/ClientInfo";
-import ClientInfoExtension from './domain/ClientInfoExtension'
+import ClientExtension from './domain/ClientExtension'
 
 declare global {
     interface Window {
         clientInfo: ClientInfo
-        clientInfoExtension: ClientInfoExtension
+        clientExtension: ClientExtension
     }
 }
 
 window.clientInfo = ClientInfoInstanceFactory.getClientInfoInstance()
 
-window.clientInfoExtension = ClientInfoInstanceFactory.getClientInfoExtensionInstance()
+window.clientExtension = ClientInfoInstanceFactory.getClientExtensionInstance()
