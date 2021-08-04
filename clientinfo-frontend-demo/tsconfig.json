@@ -21,7 +21,6 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src",
-    "../clientinfo-frontend-client/src"
+    "src"
   ]
 }

@@ -3,7 +3,7 @@ import {getExplorer, getScreenResolution, isMobileDevice} from '../hooks'
 /***
  * 客户端信息类
  */
-class ClientInfoInstance {
+class ClientInfoExtension {
     //客户端Window对象
     private _window: Window
     //客户端浏览器对象
@@ -95,5 +95,5 @@ class ClientInfoInstance {
 }
 
 
-export default ClientInfoInstance
+export default ClientInfoExtension
 

@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import {ClientInfoInstanceFactory} from '@imf/ClientInfo'
-console.log(ClientInfoInstanceFactory.getInstance().appVersion)
-console.log(ClientInfoInstanceFactory.getInstance().platform)
-console.log(ClientInfoInstanceFactory.getInstance().language)
-console.log(ClientInfoInstanceFactory.getInstance().screenResolution)
-console.log(ClientInfoInstanceFactory.getInstance().isMobileDevice)
+import '@imf/ClientInfo'
+console.log(window.clientInfo.appVersion)
+console.log(window.clientInfo.platform)
+console.log(window.clientInfo.language)
+console.log(window.clientInfo.screenResolution)
+console.log(window.clientInfo.isMobileDevice)
 
 
 
