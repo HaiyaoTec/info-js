@@ -19,7 +19,7 @@ webView.webViewClient = object : WebViewClient() {
 
 ### JS 端使用信息
 ```js
-    if (window.jsField) {
+    if (window.webViewInfoJs) {
         console.log("webViewInfoJs: " + JSON.stringify(window.webViewInfoJs))
     } else {
         console.log("webViewInfoJs no exist")
