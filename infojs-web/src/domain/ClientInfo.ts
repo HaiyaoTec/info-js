@@ -14,8 +14,6 @@ class ClientInfo {
     private _userAgent: string = 'unknown'
     //客户端运行浏览器的操作系统平台
     private _platform: string = 'unknown'
-    //客户端当前浏览器语言
-    private _language: string = 'unknown'
     //客户端浏览器的分辨率
     private _screenResolution: string = 'unknown'
     //客户端是否为移动设备
@@ -51,14 +49,6 @@ class ClientInfo {
 
     set platform(value) {
         this._platform = value
-    }
-
-    get language(): string {
-        return this._language
-    }
-
-    set language(value) {
-        this._language = value
     }
 
     get screenResolution(): string {

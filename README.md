@@ -3,9 +3,9 @@
 
 ## Install
 ```shell
-npm install @imf/ClientInfo --save
+npm install @imf/InfoJs --save
 
-yarn add @imf/ClientInfo
+yarn add @imf/InfoJs
 ```
 
 ## Start

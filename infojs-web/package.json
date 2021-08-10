@@ -1,6 +1,6 @@
 {
-  "name": "@imf/ClientInfo",
-  "version": "1.0.7",
+  "name": "@imf/info-js",
+  "version": "1.0.8",
   "description": "client information",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
