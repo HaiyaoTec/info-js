@@ -11,8 +11,8 @@ object InfoJs {
 
     fun inject(webView: WebView) {
         val obj = Gson().toJson(getInfo())
-        val exp = "if(window.jsField == undefined){\n" +
-                "window.jsField=$obj;\n" +
+        val exp = "if(window.webViewInfoJs == undefined){\n" +
+                "window.webViewInfoJs=$obj;\n" +
                 "window.dispatchEvent(new Event('WebViewInfoJsReady'));\n" +
                 "}\n"
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
