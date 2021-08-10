@@ -28,11 +28,10 @@ console.log(ClientInfo.language)//zh-cn
 | platform | MacIntel | 客户端运行浏览器的操作系统平台 |
 #### example
 ```ts
-console.log(ClientInfoInstanceFactory.getInstance().appVersion)//5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36
-console.log(ClientInfoInstanceFactory.getInstance().platform)//MacIntel
-console.log(ClientInfoInstanceFactory.getInstance().language)//zh-cn
-console.log(ClientInfoInstanceFactory.getInstance().screenResolution)//1080*1920
-console.log(ClientInfoInstanceFactory.getInstance().isMobileDevice)//false
+console.log(window.info.appVersion)//5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36
+console.log(window.info.platform)//MacIntel
+console.log(window.info.screenResolution)//1080*1920
+console.log(window.info.isMobileDevice)//false
 ```
 ## Future
 * 浏览器指纹

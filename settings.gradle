@@ -1,0 +1,6 @@
+rootProject.name = "infojs"
+include ':infojs-web'
+include ':infojs-server'
+include ':infojs-android'
+include ':demo-web'
+include ':demo-android'
