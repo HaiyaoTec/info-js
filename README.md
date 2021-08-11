@@ -8,7 +8,7 @@ npm install @imf/info-js --save
 yarn add @imf/info-js
 ```
 
-## Startinfo-js
+## Start 
 
 #### 使用
 使用极其方便，并且在任意地方都可以使用
