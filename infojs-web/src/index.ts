@@ -5,7 +5,6 @@ declare global {
     interface Window {
         browserInfo: BrowserInfo
         browserExtension: BrowserExtension
-        webViewInfoJs :ClientInfo
     }
 }
 

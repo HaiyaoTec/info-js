@@ -23,6 +23,9 @@ class BrowserInfo {
     //客户端信息对象
     private _client: ClientInfo | null = null
 
+    //有无客户端
+
+
     constructor() {
         //初始化window和nacigator对象
         this._window = window
@@ -54,6 +57,10 @@ class BrowserInfo {
     get isMobileDevice(): boolean {
         return this._isMobileDevice
     }
+    //TODO
+    get hasClient(): boolean {
+        return !!this._client
+    }
 
     get client(): ClientInfo | null {
         return this._client;
@@ -73,15 +80,16 @@ class BrowserInfo {
         this._isMobileDevice = isMobileDevice(this._window)
         //获取从安卓注入的webViewClient
         //1.1当webViewInfoJs已存在
+        //@ts-ignore
         if (window.webViewInfoJs) {
+            //@ts-ignore
             this._client = window.webViewInfoJs
-            console.log("webViewInfoJs: " + JSON.stringify(window.webViewInfoJs))
         } else {
             //1.2当webViewnInfoJs还未加载完成
             console.log("webViewInfoJs no exist")
             window.addEventListener("WebViewInfoJsReady", () => {
                 //当webViewInfoJs加载完毕添加到window对象上
-                console.log("webViewInfoJs from message: " + JSON.stringify(window.webViewInfoJs))
+                //@ts-ignore
                 this._client = window.webViewInfoJs
             }, false)
         }

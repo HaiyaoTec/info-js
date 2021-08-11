@@ -1,21 +1,19 @@
-# BrowserInfo
+# InfoJs
 更方便的获取客户端信息
 
 ## Install
 ```shell
-npm install @imf/InfoJs --save
+npm install @imf/info-js --save
 
-yarn add @imf/InfoJs
+yarn add @imf/info-js
 ```
 
-## Start
+## Startinfo-js
 
 #### 使用
 使用极其方便，并且在任意地方都可以使用
 ```ts
-import {ClientInfoInstanceFactory} from '@imf/BrowserInfo'
-const BrowserInfo=ClientInfoInstanceFactory.getInstance()
-console.log(BrowserInfo.language)//zh-cn
+import '@imf/info-js'//仅需导入即可
 ```
 
 #### 参数解释
@@ -28,10 +26,10 @@ console.log(BrowserInfo.language)//zh-cn
 | platform | MacIntel | 客户端运行浏览器的操作系统平台 |
 #### example
 ```ts
-console.log(window.info.appVersion)//5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36
-console.log(window.info.platform)//MacIntel
-console.log(window.info.screenResolution)//1080*1920
-console.log(window.info.isMobileDevice)//false
+console.log(window.browserInfo.appVersion)//5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36
+console.log(window.browserInfo.platform)//MacIntel
+console.log(window.browserInfo.screenResolution)//1080*1920
+console.log(window.browserInfo.isMobileDevice)//false
 ```
 ## Future
 * 浏览器指纹
