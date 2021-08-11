@@ -4,13 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import '@imf/ClientInfo'
-console.log(window.clientInfo.appVersion)
-console.log(window.clientInfo.platform)
-console.log(window.clientInfo.language)
-console.log(window.clientInfo.screenResolution)
-console.log(window.clientExtension.language)
-window.clientExtension.language='zh-cn'
+import '@imf/info-js'
+console.log(window.browserInfo)
+console.log(window.browserInfo.appVersion)
+console.log(window.browserInfo.platform)
+console.log(window.browserInfo.screenResolution)
+console.log(window.browserInfo.client)
+console.log(window.browserExtension.language)
+window.browserExtension.language='zh-cn'
+console.log(window.browserExtension.language)
 
 
 

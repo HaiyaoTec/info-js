@@ -31,20 +31,20 @@ function getExplorer(window: Window): string {
  *  获取客户端分辨率
  * @param window 客户端window对象
  */
-function getScreenResolution(window:Window){
-    return window.screen.width+"*"+window.screen.height;
+function getScreenResolution(window: Window) {
+    return window.screen.width + "*" + window.screen.height;
 }
 
 /***
  * 客户端是否为移动设备
  * @param window
  */
-function isMobileDevice(window:Window){
-    if(window.navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
-       return true
-    }else {
+function isMobileDevice(window: Window) {
+    if (window.navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) {
+        return true
+    } else {
         return false
     }
 }
 
-export {getExplorer,getScreenResolution,isMobileDevice}
+export {getExplorer, getScreenResolution, isMobileDevice}

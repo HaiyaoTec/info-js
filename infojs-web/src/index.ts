@@ -1,14 +1,14 @@
-import ClientInfoInstanceFactory from './module/ClientInfoInstanceFactory'
+import {BrowserInfo, BrowserExtension} from './domain'
 import ClientInfo from "./domain/ClientInfo";
-import ClientExtension from './domain/ClientExtension'
 
 declare global {
     interface Window {
-        clientInfo: ClientInfo
-        clientExtension: ClientExtension
+        browserInfo: BrowserInfo
+        browserExtension: BrowserExtension
+        webViewInfoJs :ClientInfo
     }
 }
 
-window.clientInfo = ClientInfoInstanceFactory.getClientInfoInstance()
+window.browserInfo = new BrowserInfo()
 
-window.clientExtension = ClientInfoInstanceFactory.getClientExtensionInstance()
+window.browserExtension = new BrowserExtension()

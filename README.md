@@ -1,4 +1,4 @@
-# ClientInfo
+# BrowserInfo
 更方便的获取客户端信息
 
 ## Install
@@ -13,9 +13,9 @@ yarn add @imf/InfoJs
 #### 使用
 使用极其方便，并且在任意地方都可以使用
 ```ts
-import {ClientInfoInstanceFactory} from '@imf/ClientInfo'
-const ClientInfo=ClientInfoInstanceFactory.getInstance()
-console.log(ClientInfo.language)//zh-cn
+import {ClientInfoInstanceFactory} from '@imf/BrowserInfo'
+const BrowserInfo=ClientInfoInstanceFactory.getInstance()
+console.log(BrowserInfo.language)//zh-cn
 ```
 
 #### 参数解释
