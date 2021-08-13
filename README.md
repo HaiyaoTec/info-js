@@ -15,23 +15,34 @@ yarn add @imf/info-js
 ```ts
 import '@imf/info-js'//仅需导入即可
 ```
+## API 🍉
 
-#### 参数解释
+#### browserExtension API (<font color=red>Writable/Readable</font>)
 | key | value | 解释 |
 | :-----| ----: | :----: |
-| appVersion | 5.0 (Macintosh; Intel Mac OS X 10_15_7)... | 客户端浏览器的平台和版本信息|
 | language | zh-cn |客户端当前浏览器语言  |
+
+#### browserInfo API (<font color=red>OnlyRead</font>)
+| key | value | 解释 |
+| :-----| ----: | :----: |
 | screenResolution | 1080*1920 | 客户端浏览器的分辨率 |
 | isMobileDevice | false| 客户端是否为移动设备 |
 | platform | MacIntel | 客户端运行浏览器的操作系统平台 |
+| userAgent | MacIntel | 客户度浏览器 |
+| client |a Object ^_^ | 客户端信息对象 |
+
 #### example 📦
 ```ts
-console.log(window.browserInfo.appVersion)//5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36
 console.log(window.browserInfo.platform)//MacIntel
-console.log(window.browserInfo.screenResolution)//1080*1920
-console.log(window.browserInfo.isMobileDevice)//false
+console.log(window.browserInfo.screenResolution)//1440*900
+console.log(window.browserInfo.client)// a Object ^_^
+console.log(window.browserInfo.isMobileDevice)// false
+console.log(window.browserExtension.language)//zh-cn
+console.log(window.browserInfo.userAgent)//Chrome
+window.browserExtension.language='zh-cn'//set language
 ```
 ## Future 🛠️
+* 应用版本号
 * 浏览器指纹
 * 用户ip地址
 * 用户所在国家

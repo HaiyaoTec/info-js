@@ -11,8 +11,10 @@ console.log(window.browserInfo.platform)
 console.log(window.browserInfo.screenResolution)
 console.log(window.browserInfo.client)
 console.log(window.browserExtension.language)
+console.log(window.browserInfo.isMobileDevice)
+console.log(window.browserInfo.userAgent)
 window.browserExtension.language='zh-cn'
-console.log(window.browserExtension.language)
+
 
 
 
