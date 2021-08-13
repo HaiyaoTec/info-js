@@ -17,19 +17,30 @@ import '@imf/info-js'//仅需导入即可
 ```
 ## API 🍉
 
-#### browserExtension API (<font color=red>Writable/Readable</font>)
+### Window
+
+```typescript
+window.browserInfo : BrowserInfo
+window.browserExtension : BrowserExtension
+```
+
+
+### BrowserExtension  (<font color=red>Writable/Readable</font>)
 | key | value | 解释 |
 | :-----| ----: | :----: |
 | language | zh-cn |客户端当前浏览器语言  |
 
-#### browserInfo API (<font color=red>OnlyRead</font>)
+### BrowserInfo (<font color=red>OnlyRead</font>)
 | key | value | 解释 |
 | :-----| ----: | :----: |
 | screenResolution | 1080*1920 | 客户端浏览器的分辨率 |
 | isMobileDevice | false| 客户端是否为移动设备 |
 | platform | MacIntel | 客户端运行浏览器的操作系统平台 |
 | userAgent | MacIntel | 客户度浏览器 |
-| client |a Object ^_^ | 客户端信息对象 |
+| client | ClientInfo | 客户端信息对象 |
+
+### ClientInfo
+
 
 #### example 📦
 ```ts
