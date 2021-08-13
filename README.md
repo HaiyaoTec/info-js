@@ -41,8 +41,22 @@ window.browserExtension : BrowserExtension
 
 ### ClientInfo
 
+```ts
+window.browserInfo.client : ClientInfo
+```
+| key | value | 解释 |
+| :-----| ----: | :----: |
+| packageName | 1080*1920 | 包名 |
+| appVersionCode | false| app版本号 |
+| appVersionName | MacIntel | app版本名称 |
+| platform | MacIntel | 客户端平台 |
+| platformVersion | ClientInfo | 客户端平台版本号 |
+| deviceId | ClientInfo | 客户端设备Id |
+| deviceBrand | ClientInfo | 客户端设备品牌 |
 
-#### example 📦
+
+
+### example 📦
 ```ts
 console.log(window.browserInfo.platform)//MacIntel
 console.log(window.browserInfo.screenResolution)//1440*900
