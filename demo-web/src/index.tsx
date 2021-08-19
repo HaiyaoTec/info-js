@@ -13,6 +13,7 @@ console.log(window.browserInfo.client)
 console.log(window.browserExtension.language)
 console.log(window.browserInfo.isMobileDevice)
 console.log(window.browserInfo.userAgent)
+console.log(window.browserInfo.hasClient())
 window.browserExtension.language='zh-cn'
 
 

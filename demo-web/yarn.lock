@@ -1280,10 +1280,10 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
-"@imf/info-js@^1.0.0":
-  version "1.0.0"
-  resolved "http://maven.jinuo.me/repository/jinuo-npm-inner/@imf/info-js/-/info-js-1.0.0.tgz#4dae45638739c5a8975af3425157a54b059ad884"
-  integrity sha512-lK/yuLZsU1AUQx5fGHxDwTFsau9k6NTHJP6p/JZJoXqu96eiTnl2TIedVn3NOCKVdcoqOpeB0+Fa02qR4fYLNw==
+"@imf/info-js@^1.0.2":
+  version "1.0.2"
+  resolved "http://maven.jinuo.me/repository/jinuo-npm-inner/@imf/info-js/-/info-js-1.0.2.tgz#fc3a9a88282dc758a85f80275907f5bfb62fef7c"
+  integrity sha512-dTugvK+DT6ixfdthROE3rM7qxpfWjgjMSHPdyO1jXTSxEdpLscd4RCZm7nu2j1T1M9PGw5SsupADAP/MuSCzeA==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
