@@ -5,6 +5,7 @@
     "target": "ES5",
     "allowJs": false,
     "strict": true,
+    "lib": ["ES2016"],
     "moduleResolution": "node",
     "outDir": "dist",
     "baseUrl": "./src",
