@@ -1,4 +1,4 @@
-namespace Currency{
+namespace Country{
    export enum CurrencyFiatEnum {
         FIAT_IDR,
         FIAT_USD,

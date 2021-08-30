@@ -1,10 +1,9 @@
 namespace Country {
-    import CurrencyFiatEnum = Currency.CurrencyFiatEnum;
-
+    import CurrencyFiatEnum = Country.CurrencyFiatEnum;
     export class CountryInfoQueryImpl implements CountryInfoQuery {
-        private readonly data: Array<CountryInfo>;
+        private static data: Array<CountryInfo>;
         constructor() {
-            this.data = [
+            CountryInfoQueryImpl.data = [
                 {
                     _name: 'Indonesia',
                     _currency: [CurrencyFiatEnum.FIAT_IDR],
@@ -17,19 +16,19 @@ namespace Country {
             ]
         }
         getCountryInfoBySimple(simple: Country.CountryEnum): CountryInfo {
-            return this.data.filter((item: CountryInfo) => {
+            return CountryInfoQueryImpl.data.filter((item: CountryInfo) => {
                 return item._simple === simple
             })?.[0];
         };
 
-        getCountryInfoByCurrency(currency: Currency.CurrencyFiatEnum): Array<CountryInfo> {
-            return this.data.filter((item: CountryInfo) => {
+        getCountryInfoByCurrency(currency: Country.CurrencyFiatEnum): Array<CountryInfo> {
+            return CountryInfoQueryImpl.data.filter((item: CountryInfo) => {
                 return item._currency.indexOf(currency)
             });
         };
 
         getCountryInfoAll(): Array<Country.CountryInfo> {
-            return this.data;
+            return CountryInfoQueryImpl.data;
         }
     }
 }

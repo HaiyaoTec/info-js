@@ -1,6 +1,5 @@
 namespace Country{
-    import CurrencyEncryptEnum = Currency.CurrencyEncryptEnum;
-    import CurrencyFiatEnum = Currency.CurrencyFiatEnum;
+    import CurrencyFiatEnum = Country.CurrencyFiatEnum;
     export interface CountryInfo {
         //国家名字:China、Spain
         _name:string

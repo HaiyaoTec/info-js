@@ -1,5 +1,5 @@
-namespace Country{
-    import CurrencyFiatEnum = Currency.CurrencyFiatEnum;
+namespace Country {
+    import CurrencyFiatEnum = Country.CurrencyFiatEnum;
 
     export interface CountryInfoQuery{
         getCountryInfoBySimple(simple:CountryEnum):CountryInfo

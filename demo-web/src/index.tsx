@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import '@imf/info-js'
+import {CountryInfo} from '@imf/info-js'
 console.log(window.browserInfo)
 console.log(window.browserInfo.appVersion)
 console.log(window.browserInfo.platform)
@@ -16,7 +16,7 @@ console.log(window.browserInfo.userAgent)
 console.log(window.browserInfo.hasClient())
 window.browserExtension.language='zh-cn'
 
-
+console.log(CountryInfo)
 
 
 
