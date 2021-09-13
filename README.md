@@ -8,9 +8,9 @@ npm install @imf/info-js --save
 yarn add @imf/info-js
 ```
 
-## Start ⚡️
+## Useage ⚡️
 
-#### 使用
+#### 
 使用极其方便，并且在任意地方都可以使用
 ```ts
 import '@imf/info-js'//仅需导入即可
