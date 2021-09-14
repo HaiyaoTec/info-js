@@ -1,5 +1,5 @@
+import {CountryInfoQueryImpl as CountryInfo} from './country'
 import {BrowserInfo, BrowserExtension} from './domain'
-import CountryInfo = Country.CountryInfoQueryImpl
 
 declare global {
     interface Window {

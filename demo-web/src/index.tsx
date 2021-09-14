@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import {CountryInfo} from '@imf/info-js'
+import {CountryEnum} from "@imf/info-js/dist/country/enum/CountryEnum";
+
 console.log(window.browserInfo)
 console.log(window.browserInfo.appVersion)
 console.log(window.browserInfo.platform)
@@ -15,8 +17,8 @@ console.log(window.browserInfo.isMobileDevice)
 console.log(window.browserInfo.userAgent)
 console.log(window.browserInfo.hasClient())
 window.browserExtension.language='zh-cn'
-
-console.log(CountryInfo)
+const countryInfo = new CountryInfo();
+console.log(countryInfo.getCountryInfoBySimple(CountryEnum.ID))
 
 
 
