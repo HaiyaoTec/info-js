@@ -11,11 +11,10 @@ console.log(window.browserInfo)
 console.log(window.browserInfo.appVersion)
 console.log(window.browserInfo.platform)
 console.log(window.browserInfo.screenResolution)
-console.log(window.browserInfo.client)
+console.log(window.browserInfo.hasClient)
 console.log(window.browserExtension.language)
 console.log(window.browserInfo.isMobileDevice)
 console.log(window.browserInfo.userAgent)
-console.log(window.browserInfo.hasClient())
 window.browserExtension.language='zh-cn'
 const countryInfo = new CountryInfo();
 console.log(countryInfo.getCountryInfoBySimple(CountryEnum.ID))

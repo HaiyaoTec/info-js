@@ -1,1 +1,1 @@
-apply plugin: 'craft-app'
+apply plugin: 'craft-server'

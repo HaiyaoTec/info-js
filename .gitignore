@@ -54,3 +54,7 @@ pnpm-debug.log*
 *.iml
 
 package-lock.json
+
+.yalc
+yalc.lock
+
