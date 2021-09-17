@@ -57,6 +57,7 @@ class BrowserInfo {
     get isMobileDevice(): boolean {
         return this._isMobileDevice
     }
+
     //TODO
     public hasClient(): boolean {
         return !!this._client

@@ -2,9 +2,10 @@
   "compilerOptions": {
     "declaration": true,
     "module": "ESNext",
-    "target": "ES5",
+    "target": "ES6",
     "allowJs": false,
     "strict": true,
+    "lib": ["ES2016", "dom"],
     "moduleResolution": "node",
     "outDir": "dist",
     "baseUrl": "./src",
