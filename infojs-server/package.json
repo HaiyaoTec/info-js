@@ -20,6 +20,7 @@
     "express-jwt": "^5.3.3",
     "jsonwebtoken": "^8.5.1",
     "multer": "^1.4.2",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "request-ip": "^2.1.3"
   }
 }

@@ -1,7 +1,7 @@
 name: infojs-server
 build:
   beta:
-    - ./infojs-server/docker build -t infojs-server:latest .
+    - docker build -t infojs-server:latest infojs-server
   prod:
-    - ./infojs-server/docker build -t infojs-server:latest .
+    - docker build -t infojs-server:latest infojs-server
 release: land

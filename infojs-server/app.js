@@ -4,6 +4,7 @@ const express = require('express');
 const cors = require('cors');
 // 创建 express 的服务器实例
 const app = express();
+
 //导入校验表单数据的模块
 // const joi = require('@hapi/joi')
 //Write you code
@@ -29,6 +30,17 @@ app.use(function (req, res, next) {
     }
     next()
 })
+
+
+// require request-ip and register it as middleware
+//获取ip地址的包
+let requestIp = require('request-ip');
+app.use(requestIp.mw())
+
+// on localhost you'll see 127.0.0.1 if you're using IPv4
+// or ::1, ::ffff:127.0.0.1 if you're using IPv6
+
+
 
 //获取ip路由
 const clientInfoRouter = require('./router/clientInfo')
