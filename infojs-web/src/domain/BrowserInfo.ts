@@ -1,10 +1,14 @@
 import {getExplorer, getScreenResolution, isMobileDevice} from '../hooks'
 import ClientInfo from "./ClientInfo";
+//@ts-ignore
+import {appInfo} from '@infoJs-plugin-virtual-module'
 
 /***
  * 浏览器信息类(ReadOnly)
  */
 class BrowserInfo {
+
+
 
     //客户端浏览器Window对象
     private _window: Window
@@ -23,8 +27,14 @@ class BrowserInfo {
     //客户端信息对象
     private _client: ClientInfo | null = null
 
-    //有无客户端
-
+    //当前app包名
+    private _appPackageName:string='unknown'
+    //当前项目的app版本号
+    private _appVersionCode:string='unknown'
+    //当前app运行的环境变量
+    private _appMode:string='unknown'
+    //客户端ip
+    //客户端ip所在国家
 
     constructor() {
         //初始化window和nacigator对象
@@ -32,6 +42,18 @@ class BrowserInfo {
         this._navigator = this._window.navigator
         //初始化客户端信息对象
         this.initClientInfo();
+    }
+
+    get appPackageName(): string {
+        return this._appPackageName;
+    }
+
+    get appMode(): string {
+        return this._appMode;
+    }
+
+    get appVersionCode(): string {
+        return this._appVersionCode;
     }
 
     get appVersion(): string {
@@ -79,6 +101,13 @@ class BrowserInfo {
         this._screenResolution = getScreenResolution(this._window)
         //获取客户端是否为移动设备
         this._isMobileDevice = isMobileDevice(this._window)
+        //获取app版本号
+        this._appVersionCode=appInfo.appVersion
+        //获取app运行环境
+        this._appMode=appInfo.appMode
+        //获取app包名
+        this._appPackageName=appInfo.appPackageName
+
         //获取从安卓注入的webViewClient
         //1.1当webViewInfoJs已存在
         //@ts-ignore

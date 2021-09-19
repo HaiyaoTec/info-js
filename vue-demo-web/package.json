@@ -1,0 +1,19 @@
+{
+  "name": "vue-demo-web",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@imf/info-js": "^1.0.6-alpha3",
+    "vue": "^3.2.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.6.0",
+    "@vue/compiler-sfc": "^3.2.6",
+    "vite": "^2.5.2",
+    "@imf/infojs-plugin": "^1.0.5"
+  }
+}
