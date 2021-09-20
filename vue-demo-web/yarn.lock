@@ -20,15 +20,15 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@imf/info-js@^1.0.6-alpha3":
-  version "1.0.6-alpha3"
-  resolved "http://maven.jinuo.me/repository/jinuo-npm-inner/@imf/info-js/-/info-js-1.0.6-alpha3.tgz#619afc89333b10526c8ef0c35a1022506c09ef1a"
-  integrity sha512-LdleWt0rxqfebwFIwlK0H2nX/AmG4FxnT2V8GYRQ7HBXM0dyXc4wfETmihuhul4o39YLl1DwxaNH+44QXyyhWw==
+"@imf/info-js@^1.0.6-alpha4":
+  version "1.0.6-alpha4"
+  resolved "http://maven.jinuo.me/repository/jinuo-npm-inner/@imf/info-js/-/info-js-1.0.6-alpha4.tgz#73213b8e88efe4f26d02fb460018e8972fda80dd"
+  integrity sha512-NBDNJGU0dHLiT3QX7rvipiGX9FUCfc3NfxjEOTT0J+v7QtXyLIs9cfIBXxu7XlmqzmH4u4AGyXUW0vQ8Gr2Fkw==
 
-"@imf/infojs-plugin@^1.0.5":
-  version "1.0.5"
-  resolved "http://maven.jinuo.me/repository/jinuo-npm-inner/@imf/infojs-plugin/-/infojs-plugin-1.0.5.tgz#180029df7bdfb7a5e9783c2d8143f034222e14ce"
-  integrity sha512-VEz7GpCGI3CO9lVGGiUaJJpHPRPg+v6mUH3zRScuUIggjqWX2Qc7dQFDWZJoKN4dklYwVoXcrvy06qjwYRpvag==
+"@imf/infojs-plugin@^1.0.6":
+  version "1.0.6"
+  resolved "http://maven.jinuo.me/repository/jinuo-npm-inner/@imf/infojs-plugin/-/infojs-plugin-1.0.6.tgz#0f96af034ea7db89a2a09c26e73f36a7d3ea7344"
+  integrity sha512-QPrQHlVoK37HcruT0iuAC99JP4fBXwimUz06TjOlNVYtqFAi3/EddpbzlbLDNRDOgRsRGLFNXQ6/JprZgmlOhg==
 
 "@types/estree@^0.0.48":
   version "0.0.48"

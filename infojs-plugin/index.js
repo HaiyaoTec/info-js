@@ -4,12 +4,12 @@ let pkgManifest = require(path.join(cwd, 'package.json'));
 module.exports = function () {
     let appVersion = pkgManifest.version
     let appPackageName = pkgManifest.name
-    let appMode = undefined
+    let viteMode = undefined
     const virtualFileId = '@infoJs-plugin-virtual-module'
     return {
         name: 'infoJs-plugin', // 必须的，将会在 warning 和 error 中显示
         config: (UserConfig, {mode}) => {
-            appMode = mode;
+            viteMode = mode;
         },
         resolveId(id) {
             if (id === virtualFileId) {
@@ -22,7 +22,7 @@ module.exports = function () {
                 export const appInfo = {
                 "appVersion":"${appVersion}",
                 "appPackageName":"${appPackageName}",
-                "appMode":"${appMode}",
+                "viteMode":"${viteMode}",
                 }
                 `
             }
