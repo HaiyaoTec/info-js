@@ -1,7 +1,7 @@
 # InfoJs ⚡
 更方便的获取客户端信息
 
-![](https://static01.imgkr.com/temp/7321ea755abc4bb49480bcd591ad6bcf.bmp)
+![infoJs](https://static01.imgkr.com/temp/a4132579f1c94298a3b47d8707b1ef72.png)
 ## Install 💡
 ```shell
 npm install @imf/info-js --save
