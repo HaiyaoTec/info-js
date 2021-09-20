@@ -1,6 +1,7 @@
 # InfoJs ⚡
 更方便的获取客户端信息
 
+![](https://static01.imgkr.com/temp/7321ea755abc4bb49480bcd591ad6bcf.bmp)
 ## Install 💡
 ```shell
 npm install @imf/info-js --save
@@ -14,7 +15,7 @@ yarn add @imf/info-js
 yarn add @imf/infojs-plugin --dev
 ```
 
-## Useage ⚡️
+## Useage 🌲
 
 ###
 **step1: 配置vite插件**
