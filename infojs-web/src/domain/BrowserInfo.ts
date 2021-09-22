@@ -133,8 +133,7 @@ class BrowserInfo {
             .catch(e=>console.log('获取客户端ip和ip所在地理位置失败～'))
         //初始化appMode
         try {
-            // @ts-ignore
-            this._appMode = import.meta.env.env ?? 'unknown'
+            this._appMode = appInfo.appMode ?? 'unknown'
         }catch (e) {
             console.log('获取appMode失败～')
         }

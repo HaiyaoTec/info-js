@@ -1,5 +1,7 @@
 const path = require("path")
 const cwd = process.cwd();
+//获取gaia环境变量
+let appMode=process?.env?.env;
 let pkgManifest = require(path.join(cwd, 'package.json'));
 module.exports = function () {
     let appVersion = pkgManifest.version
@@ -23,6 +25,7 @@ module.exports = function () {
                 "appVersion":"${appVersion}",
                 "appPackageName":"${appPackageName}",
                 "viteMode":"${viteMode}",
+                "appMode":"${appMode}"
                 }
                 `
             }

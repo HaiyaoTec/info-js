@@ -75,26 +75,6 @@ window.browserExtension : BrowserExtension
 | viteMode | development｜build | App的运行环境 |
 | client | ClientInfo | 客户端信息对象 |
 
-### window.browserInfo.client
-
-```
-
-window.browserInfo.client : ClientInfo
-
-```
-
-| key | 解释 |
-| :-----| :----: |
-| packageName | 客户端包名 |
-| appVersionCode | 客户端版本号 |
-| appVersionName | 客户端版本名称 |
-| platform | 客户端平台 |
-| platformVersion | 客户端平台版本号 |
-| deviceId | 客户端设备Id |
-| deviceBrand | 客户端设备品牌 |
-
-
-
 ### example 📦
 ```ts
 console.log(window.browserInfo.platform)//MacIntel
@@ -106,6 +86,9 @@ console.log(window.browserInfo.appIpCountry)//CN
 console.log(window.browserInfo.appMode)//beta
 console.log(window.browserInfo.appPackageName)//vue-demo-web
 console.log(window.browserInfo.appVersionCode)//1.0.0
+console.log(window.browserInfo.appMode)//beta
+console.log(window.browserInfo.viteMode)//production
+
 ......
 
 console.log(window.browserExtension.language)//zh-cn

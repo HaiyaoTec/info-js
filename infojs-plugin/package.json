@@ -1,6 +1,6 @@
 {
   "name": "@imf/infojs-plugin",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "infoJs vite plugin",
   "main": "index.js",
   "scripts": {
