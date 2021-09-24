@@ -34,10 +34,10 @@
   dependencies:
     "@fingerprintjs/fingerprintjs" "^3.0.3"
 
-"@imf/info-js@^1.0.6-alpha6":
-  version "1.0.6-alpha6"
-  resolved "http://maven.jinuo.me/repository/jinuo-npm-inner/@imf/info-js/-/info-js-1.0.6-alpha6.tgz#1e0ebe004813d83f6b869a3cabb6a28b230b2499"
-  integrity sha512-NKGJzh7ozGX/21uBAQbJOgzF4P6v/10kPwX5ik4EQF6bueaL7U5y2QymalzjscpYOLTj5jDXgnIEsa9pHsXPJQ==
+"@imf/info-js@^1.1.0":
+  version "1.1.0"
+  resolved "http://maven.jinuo.me/repository/jinuo-npm-inner/@imf/info-js/-/info-js-1.1.0.tgz#e6f3c25102625ec1584bfb550974354b73c408db"
+  integrity sha512-Yl2vMkL0XqvKSfAj8glsDdFFvvwOUFa8j1iYUsH4RUNELKNzWlUyyqndRWO+MO/Sij9lmwfmyEUzOpSYM5pBYQ==
   dependencies:
     "@imf/browserid" "^1.0.0"
 
