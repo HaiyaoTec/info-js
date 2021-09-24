@@ -20,10 +20,26 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@imf/info-js@^1.0.6-alpha5":
-  version "1.0.6-alpha5"
-  resolved "http://maven.jinuo.me/repository/jinuo-npm-inner/@imf/info-js/-/info-js-1.0.6-alpha5.tgz#fad43a203475e266fc73056ad8a8f47ab4aecdb3"
-  integrity sha512-+eOkdetpCiH5yxPf4KlpQG9CrxPFVE4kFzhymPRu0PE2KK4+nNdvBOJEmLBkW/163jGWhkW44BwFluTcEtGr1Q==
+"@fingerprintjs/fingerprintjs@^3.0.3":
+  version "3.3.0"
+  resolved "https://registry.nlark.com/@fingerprintjs/fingerprintjs/download/@fingerprintjs/fingerprintjs-3.3.0.tgz#d15c2fab8e0d9138bcb8efa1429dd780f93bb945"
+  integrity sha1-0Vwvq44NkTi8uO+hQp3XgPk7uUU=
+  dependencies:
+    tslib "^2.0.1"
+
+"@imf/browserid@^1.0.0":
+  version "1.0.0"
+  resolved "http://maven.jinuo.me/repository/jinuo-npm-inner/@imf/browserid/-/browserid-1.0.0.tgz#14ff39477f1d33d779a5e0bf4818b9400c1d39c8"
+  integrity sha512-OpDxcuo9j4FbHLMEuML4c3uit8gzHO5L36UimaWMU4WnpNvC/CtUWx+1Vx4T3LnPPoArnqbYt57VuOdEv6GKjA==
+  dependencies:
+    "@fingerprintjs/fingerprintjs" "^3.0.3"
+
+"@imf/info-js@^1.0.6-alpha6":
+  version "1.0.6-alpha6"
+  resolved "http://maven.jinuo.me/repository/jinuo-npm-inner/@imf/info-js/-/info-js-1.0.6-alpha6.tgz#1e0ebe004813d83f6b869a3cabb6a28b230b2499"
+  integrity sha512-NKGJzh7ozGX/21uBAQbJOgzF4P6v/10kPwX5ik4EQF6bueaL7U5y2QymalzjscpYOLTj5jDXgnIEsa9pHsXPJQ==
+  dependencies:
+    "@imf/browserid" "^1.0.0"
 
 "@imf/infojs-plugin@^1.0.7":
   version "1.0.7"
@@ -384,6 +400,11 @@ to-fast-properties@^2.0.0:
   version "2.0.0"
   resolved "https://registry.nlark.com/to-fast-properties/download/to-fast-properties-2.0.0.tgz?cache=0&sync_timestamp=1628418925592&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fto-fast-properties%2Fdownload%2Fto-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
   integrity sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
+
+tslib@^2.0.1:
+  version "2.3.1"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.3.1.tgz?cache=0&sync_timestamp=1628722556410&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE=
 
 util-deprecate@^1.0.2:
   version "1.0.2"

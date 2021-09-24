@@ -58,6 +58,20 @@
   dependencies:
     chalk "^4.0.0"
 
+"@fingerprintjs/fingerprintjs@^3.0.3":
+  version "3.3.0"
+  resolved "https://registry.nlark.com/@fingerprintjs/fingerprintjs/download/@fingerprintjs/fingerprintjs-3.3.0.tgz#d15c2fab8e0d9138bcb8efa1429dd780f93bb945"
+  integrity sha1-0Vwvq44NkTi8uO+hQp3XgPk7uUU=
+  dependencies:
+    tslib "^2.0.1"
+
+"@imf/browserid@^1.0.0":
+  version "1.0.0"
+  resolved "http://maven.jinuo.me/repository/jinuo-npm-inner/@imf/browserid/-/browserid-1.0.0.tgz#14ff39477f1d33d779a5e0bf4818b9400c1d39c8"
+  integrity sha512-OpDxcuo9j4FbHLMEuML4c3uit8gzHO5L36UimaWMU4WnpNvC/CtUWx+1Vx4T3LnPPoArnqbYt57VuOdEv6GKjA==
+  dependencies:
+    "@fingerprintjs/fingerprintjs" "^3.0.3"
+
 "@types/node@^14.14.41":
   version "14.17.6"
   resolved "https://registry.npmjs.org/@types/node/-/node-14.17.6.tgz#cc61c8361c89e70c468cda464d1fa3dd7e5ebd62"
@@ -829,6 +843,11 @@ tslib@^1.9.0:
   version "1.14.1"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
+
+tslib@^2.0.1:
+  version "2.3.1"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE=
 
 typescript@^4.1.3:
   version "4.3.5"

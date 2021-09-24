@@ -2,6 +2,8 @@ import {getExplorer, getScreenResolution, isMobileDevice} from '../hooks'
 import ClientInfo from "./ClientInfo";
 //@ts-ignore
 import {appInfo} from '@infoJs-plugin-virtual-module'
+//接入浏览器指纹
+import {getBrowserId} from '@imf/browserid'
 
 /***
  * 浏览器信息类(ReadOnly)
@@ -27,17 +29,20 @@ class BrowserInfo {
     private _client: ClientInfo | null = null
 
     //当前app包名
-    private _appPackageName:string='unknown'
+    private _appPackageName: string = 'unknown'
     //当前项目的app版本号
-    private _appVersionCode:string='unknown'
+    private _appVersionCode: string = 'unknown'
     //当前app运行的环境变量
-    private _viteMode:string='unknown'
+    private _viteMode: string = 'unknown'
     //客户端ip
-    private _appIpAddress:string='unknown'
+    private _appIpAddress: string = 'unknown'
     //客户端ip所在国家
-    private _appIpCountry:string='unknown'
+    private _appIpCountry: string = 'unknown'
     //WebApp mode
-    private _appMode:string='unknown'
+    private _appMode: string = 'unknown'
+    //浏览器指纹
+    private _browserId: string = 'unknown'
+
 
     constructor() {
         //初始化window和nacigator对象
@@ -45,6 +50,10 @@ class BrowserInfo {
         this._navigator = this._window.navigator
         //初始化客户端信息对象
         this.initClientInfo();
+    }
+
+    get browserId(): string {
+        return this._browserId;
     }
 
     get appPackageName(): string {
@@ -117,24 +126,31 @@ class BrowserInfo {
         //获取客户端是否为移动设备
         this._isMobileDevice = isMobileDevice(this._window)
         //获取app版本号
-        this._appVersionCode=appInfo.appVersion
+        this._appVersionCode = appInfo.appVersion
         //获取app运行环境
-        this._viteMode=appInfo.viteMode
+        this._viteMode = appInfo.viteMode
         //获取app包名
-        this._appPackageName=appInfo.appPackageName
+        this._appPackageName = appInfo.appPackageName
+
+        //获取浏览器指纹
+        getBrowserId().then(value => {
+            this._browserId = value
+        }).catch(e => {
+            console.log(e)
+        })
 
         //获取ip和country信息
         fetch('http://infojs.xyz/api/getipaddress')
             .then(response => response.json())
-            .then(data =>{
-                this._appIpAddress=data.ipAddress;
-                this._appIpCountry=data.ipCountry;
+            .then(data => {
+                this._appIpAddress = data.ipAddress;
+                this._appIpCountry = data.ipCountry;
             })
-            .catch(e=>console.log('获取客户端ip和ip所在地理位置失败～'))
+            .catch(e => console.log('获取客户端ip和ip所在地理位置失败～'))
         //初始化appMode
         try {
             this._appMode = appInfo.appMode ?? 'unknown'
-        }catch (e) {
+        } catch (e) {
             console.log('获取appMode失败～')
         }
         //获取从安卓注入的webViewClient
