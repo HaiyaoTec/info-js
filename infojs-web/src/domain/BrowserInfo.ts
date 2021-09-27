@@ -1,9 +1,14 @@
 import {getExplorer, getScreenResolution, isMobileDevice} from '../hooks'
 import ClientInfo from "./ClientInfo";
+//@ts-ignore
+import {appInfo} from '@infoJs-plugin-virtual-module'
+//接入浏览器指纹
+import {getBrowserId} from '@imf/browserid'
 
 /***
  * 浏览器信息类(ReadOnly)
  */
+
 class BrowserInfo {
 
     //客户端浏览器Window对象
@@ -23,7 +28,20 @@ class BrowserInfo {
     //客户端信息对象
     private _client: ClientInfo | null = null
 
-    //有无客户端
+    //当前app包名
+    private _appPackageName: string = 'unknown'
+    //当前项目的app版本号
+    private _appVersionCode: string = 'unknown'
+    //当前app运行的环境变量
+    private _viteMode: string = 'unknown'
+    //客户端ip
+    private _appIpAddress: string = 'unknown'
+    //客户端ip所在国家
+    private _appIpCountry: string = 'unknown'
+    //WebApp mode
+    private _appMode: string = 'unknown'
+    //浏览器指纹
+    private _browserId: string = 'unknown'
 
 
     constructor() {
@@ -32,6 +50,22 @@ class BrowserInfo {
         this._navigator = this._window.navigator
         //初始化客户端信息对象
         this.initClientInfo();
+    }
+
+    get browserId(): string {
+        return this._browserId;
+    }
+
+    get appPackageName(): string {
+        return this._appPackageName;
+    }
+
+    get viteMode(): string {
+        return this._viteMode;
+    }
+
+    get appVersionCode(): string {
+        return this._appVersionCode;
     }
 
     get appVersion(): string {
@@ -53,18 +87,30 @@ class BrowserInfo {
         return this._screenResolution
     }
 
+    get appIpAddress(): string {
+        return this._appIpAddress;
+    }
+
+    get appIpCountry(): string {
+        return this._appIpCountry;
+    }
+
+    get appMode(): string {
+        return this._appMode;
+    }
 
     get isMobileDevice(): boolean {
         return this._isMobileDevice
     }
 
-    //TODO
-    public hasClient(): boolean {
-        return !!this._client
-    }
 
     get client(): ClientInfo | null {
         return this._client;
+    }
+
+    //TODO
+    public hasClient(): boolean {
+        return !!this._client
     }
 
 
@@ -79,6 +125,34 @@ class BrowserInfo {
         this._screenResolution = getScreenResolution(this._window)
         //获取客户端是否为移动设备
         this._isMobileDevice = isMobileDevice(this._window)
+        //获取app版本号
+        this._appVersionCode = appInfo.appVersion
+        //获取app运行环境
+        this._viteMode = appInfo.viteMode
+        //获取app包名
+        this._appPackageName = appInfo.appPackageName
+
+        //获取浏览器指纹
+        getBrowserId().then(value => {
+            this._browserId = value
+        }).catch(e => {
+            console.log(e)
+        })
+
+        //获取ip和country信息
+        fetch('http://infojs.xyz/api/getipaddress')
+            .then(response => response.json())
+            .then(data => {
+                this._appIpAddress = data.ipAddress;
+                this._appIpCountry = data.ipCountry;
+            })
+            .catch(e => console.log('获取客户端ip和ip所在地理位置失败～'))
+        //初始化appMode
+        try {
+            this._appMode = appInfo.appMode ?? 'unknown'
+        } catch (e) {
+            console.log('获取appMode失败～')
+        }
         //获取从安卓注入的webViewClient
         //1.1当webViewInfoJs已存在
         //@ts-ignore

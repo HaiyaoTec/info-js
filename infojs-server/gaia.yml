@@ -4,4 +4,4 @@ build:
     - docker build -t infojs-server:latest infojs-server
   prod:
     - docker build -t infojs-server:latest infojs-server
-release: land
+release: mars

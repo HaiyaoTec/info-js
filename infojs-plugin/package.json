@@ -1,0 +1,14 @@
+{
+  "name": "@imf/infojs-plugin",
+  "version": "1.0.7",
+  "description": "infoJs vite plugin",
+  "main": "index.js",
+  "scripts": {
+    "push": "yalc publish"
+  },
+  "author": "IMF",
+  "license": "ISC",
+  "publishConfig": {
+    "@imf:registry": "http://maven.jinuo.me/repository/jinuo-npm-inner"
+  }
+}
