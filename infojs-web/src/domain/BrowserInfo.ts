@@ -26,7 +26,7 @@ class BrowserInfo {
     //客户端是否为移动设备
     private _isMobileDevice: boolean = false
     //客户端信息对象
-    private _client: ClientInfo | null = null
+    // private _client: ClientInfo | null = null
 
     //当前app包名
     private _appPackageName: string = 'unknown'
@@ -104,14 +104,14 @@ class BrowserInfo {
     }
 
 
-    get client(): ClientInfo | null {
-        return this._client;
-    }
+    // get client(): ClientInfo | null {
+    //     return this._client;
+    // }
 
     //TODO
-    public hasClient(): boolean {
-        return !!this._client
-    }
+    // public hasClient(): boolean {
+    //     return !!this._client
+    // }
 
 
     private initClientInfo() {
@@ -156,18 +156,18 @@ class BrowserInfo {
         //获取从安卓注入的webViewClient
         //1.1当webViewInfoJs已存在
         //@ts-ignore
-        if (window.webViewInfoJs) {
-            //@ts-ignore
-            this._client = window.webViewInfoJs
-        } else {
-            //1.2当webViewnInfoJs还未加载完成
-            console.log("webViewInfoJs no exist")
-            window.addEventListener("WebViewInfoJsReady", () => {
-                //当webViewInfoJs加载完毕添加到window对象上
-                //@ts-ignore
-                this._client = window.webViewInfoJs
-            }, false)
-        }
+        // if (window.webViewInfoJs) {
+        //     //@ts-ignore
+        //     this._client = window.webViewInfoJs
+        // } else {
+        //     //1.2当webViewnInfoJs还未加载完成
+        //     console.log("webViewInfoJs no exist")
+        //     window.addEventListener("WebViewInfoJsReady", () => {
+        //         //当webViewInfoJs加载完毕添加到window对象上
+        //         //@ts-ignore
+        //         this._client = window.webViewInfoJs
+        //     }, false)
+        // }
     }
 }
 

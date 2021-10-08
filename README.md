@@ -73,13 +73,11 @@ window.browserExtension : BrowserExtension
 | appIpCountry | CN | 客户端ip所在地理位置 |
 | appMode | beta｜prod | App的运行环境 |
 | viteMode | development｜build | App的运行环境 |
-| client | ClientInfo | 客户端信息对象 |
 
 ### example 📦
 ```ts
 console.log(window.browserInfo.platform)//MacIntel
 console.log(window.browserInfo.screenResolution)//1440*900
-console.log(window.browserInfo.client)// a Object ^_^
 console.log(window.browserInfo.isMobileDevice)// false
 console.log(window.browserInfo.appIpAddress)//2409:8a62:810:93f0:1dd4:52b4:ab29:d752
 console.log(window.browserInfo.appIpCountry)//CN
