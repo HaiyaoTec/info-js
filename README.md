@@ -96,7 +96,6 @@ window.browserExtension.language='zh-cn'//set language
 
 已完成:✅&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;未完成:❌
 * 应用版本号 ✅
-* 浏览器指纹 ✅
 * 用户ip地址 ✅
 * 用户所在国家 ✅
 * 项目运行的环境类型（prod beat ）✅

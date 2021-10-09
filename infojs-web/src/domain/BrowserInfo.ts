@@ -3,7 +3,7 @@ import ClientInfo from "./ClientInfo";
 //@ts-ignore
 import {appInfo} from '@infoJs-plugin-virtual-module'
 //接入浏览器指纹
-import {getBrowserId} from '@imf/browserid'
+// import {getBrowserId} from '@imf/browserid'
 
 /***
  * 浏览器信息类(ReadOnly)
@@ -41,7 +41,7 @@ class BrowserInfo {
     //WebApp mode
     private _appMode: string = 'unknown'
     //浏览器指纹
-    private _browserId: string = 'unknown'
+    // private _browserId: string = 'unknown'
 
 
     constructor() {
@@ -52,9 +52,9 @@ class BrowserInfo {
         this.initClientInfo();
     }
 
-    get browserId(): string {
-        return this._browserId;
-    }
+    // get browserId(): string {
+    //     return this._browserId;
+    // }
 
     get appPackageName(): string {
         return this._appPackageName;
@@ -133,11 +133,11 @@ class BrowserInfo {
         this._appPackageName = appInfo.appPackageName
 
         //获取浏览器指纹
-        getBrowserId().then(value => {
-            this._browserId = value
-        }).catch(e => {
-            console.log(e)
-        })
+        // getBrowserId().then(value => {
+        //     this._browserId = value
+        // }).catch(e => {
+        //     console.log(e)
+        // })
 
         //获取ip和country信息
         fetch('http://infojs.xyz/api/getipaddress')

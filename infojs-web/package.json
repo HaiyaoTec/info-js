@@ -26,8 +26,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "@imf/browserid": "^1.0.0"
   }
 }
