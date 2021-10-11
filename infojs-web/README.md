@@ -4,15 +4,15 @@
 ![infoJs](https://static01.imgkr.com/temp/a4132579f1c94298a3b47d8707b1ef72.png)
 ## Install 💡
 ```shell
-npm install @imf/info-js --save
+npm install @haiyaotec/info-js --save
 
-npm install @imf/infojs-plugin --save-dev
+npm install @haiyaotec/infojs-plugin --save-dev
 
 or
 
-yarn add @imf/info-js
+yarn add @haiyaotec/info-js
 
-yarn add @imf/infojs-plugin --dev
+yarn add @haiyaotec/infojs-plugin --dev
 ```
 
 ## Useage 🌲
@@ -23,7 +23,7 @@ yarn add @imf/infojs-plugin --dev
 ```ts
 //在vite.config.js中进行配置
 //引入我们安装的vite插件
-import infoJsPlugin from '@imf/infojs-plugin'
+import infoJsPlugin from '@haiyaotec/infojs-plugin'
 export default defineConfig({
   plugins: [vue(),infoJsPlugin()],
   //优化包依赖
@@ -39,7 +39,7 @@ export default defineConfig({
 
  
 ```ts
-import '@imf/info-js'//仅需在main.ts导入即可
+import '@haiyaotec/info-js'//仅需在main.ts导入即可
 ```
 
 tips:完成导入后,所有的信息对象都会被注入到window对象上
