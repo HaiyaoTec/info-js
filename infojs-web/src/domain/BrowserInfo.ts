@@ -140,7 +140,7 @@ class BrowserInfo {
         // })
 
         //获取ip和country信息
-        fetch('http://infojs.xyz/api/getipaddress')
+        fetch('https://infojs.xyz/api/getipaddress')
             .then(response => response.json())
             .then(data => {
                 this._appIpAddress = data.ipAddress;
