@@ -3,7 +3,7 @@ import ClientInfo from "./ClientInfo";
 //@ts-ignore
 import {appInfo} from '@infoJs-plugin-virtual-module'
 //接入浏览器指纹
-import {getBrowserId} from '@imf/browserid'
+// import {getBrowserId} from '@imf/browserid'
 
 /***
  * 浏览器信息类(ReadOnly)
@@ -26,7 +26,7 @@ class BrowserInfo {
     //客户端是否为移动设备
     private _isMobileDevice: boolean = false
     //客户端信息对象
-    private _client: ClientInfo | null = null
+    // private _client: ClientInfo | null = null
 
     //当前app包名
     private _appPackageName: string = 'unknown'
@@ -41,7 +41,7 @@ class BrowserInfo {
     //WebApp mode
     private _appMode: string = 'unknown'
     //浏览器指纹
-    private _browserId: string = 'unknown'
+    // private _browserId: string = 'unknown'
 
 
     constructor() {
@@ -52,9 +52,9 @@ class BrowserInfo {
         this.initClientInfo();
     }
 
-    get browserId(): string {
-        return this._browserId;
-    }
+    // get browserId(): string {
+    //     return this._browserId;
+    // }
 
     get appPackageName(): string {
         return this._appPackageName;
@@ -104,17 +104,17 @@ class BrowserInfo {
     }
 
 
-    get client(): ClientInfo | null {
-        return this._client;
-    }
+    // get client(): ClientInfo | null {
+    //     return this._client;
+    // }
 
     //TODO
-    public hasClient(): boolean {
-        return !!this._client
-    }
+    // public hasClient(): boolean {
+    //     return !!this._client
+    // }
 
 
-    private initClientInfo() {
+    initClientInfo(): Promise<void> {
         //获取客户端浏览器版本信息
         this._appVersion = this._navigator.appVersion
         //获取客户端浏览器厂商
@@ -132,21 +132,19 @@ class BrowserInfo {
         //获取app包名
         this._appPackageName = appInfo.appPackageName
 
-        //获取浏览器指纹
-        getBrowserId().then(value => {
-            this._browserId = value
-        }).catch(e => {
-            console.log(e)
-        })
 
         //获取ip和country信息
-        fetch('http://infojs.xyz/api/getipaddress')
-            .then(response => response.json())
-            .then(data => {
-                this._appIpAddress = data.ipAddress;
-                this._appIpCountry = data.ipCountry;
-            })
-            .catch(e => console.log('获取客户端ip和ip所在地理位置失败～'))
+        const p2=new Promise<void>((resolve, reject)=>{
+            fetch('https://infojs.xyz/api/getipaddress')
+              .then(response => response.json())
+              .then(data => {
+                  this._appIpAddress = data.ipAddress;
+                  this._appIpCountry = data.ipCountry;
+                  resolve()
+              })
+              .catch(e => {console.log('获取客户端ip和ip所在地理位置失败～');reject()})
+        })
+
         //初始化appMode
         try {
             this._appMode = appInfo.appMode ?? 'unknown'
@@ -168,6 +166,8 @@ class BrowserInfo {
                 this._client = window.webViewInfoJs
             }, false)
         }
+
+        return Promise.all([p2]).then()
     }
 }
 
