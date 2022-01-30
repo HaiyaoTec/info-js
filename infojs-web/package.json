@@ -4,6 +4,7 @@
   "description": "client information",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "homepage": "https://github.com/HaiyaoTec/info-js",
   "scripts": {
     "prepublishOnly": "rm -rf || rimraf ./dist && tsc",
     "push": "yalc publish",
