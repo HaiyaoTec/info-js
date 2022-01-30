@@ -114,7 +114,7 @@ class BrowserInfo {
     // }
 
 
-    private initClientInfo() {
+    initClientInfo(): Promise<void> {
         //获取客户端浏览器版本信息
         this._appVersion = this._navigator.appVersion
         //获取客户端浏览器厂商
@@ -132,21 +132,19 @@ class BrowserInfo {
         //获取app包名
         this._appPackageName = appInfo.appPackageName
 
-        //获取浏览器指纹
-        // getBrowserId().then(value => {
-        //     this._browserId = value
-        // }).catch(e => {
-        //     console.log(e)
-        // })
 
         //获取ip和country信息
-        fetch('https://infojs.xyz/api/getipaddress')
-            .then(response => response.json())
-            .then(data => {
-                this._appIpAddress = data.ipAddress;
-                this._appIpCountry = data.ipCountry;
-            })
-            .catch(e => console.log('获取客户端ip和ip所在地理位置失败～'))
+        const p2=new Promise<void>((resolve, reject)=>{
+            fetch('https://infojs.xyz/api/getipaddress')
+              .then(response => response.json())
+              .then(data => {
+                  this._appIpAddress = data.ipAddress;
+                  this._appIpCountry = data.ipCountry;
+                  resolve()
+              })
+              .catch(e => {console.log('获取客户端ip和ip所在地理位置失败～');reject()})
+        })
+
         //初始化appMode
         try {
             this._appMode = appInfo.appMode ?? 'unknown'
@@ -156,18 +154,20 @@ class BrowserInfo {
         //获取从安卓注入的webViewClient
         //1.1当webViewInfoJs已存在
         //@ts-ignore
-        // if (window.webViewInfoJs) {
-        //     //@ts-ignore
-        //     this._client = window.webViewInfoJs
-        // } else {
-        //     //1.2当webViewnInfoJs还未加载完成
-        //     console.log("webViewInfoJs no exist")
-        //     window.addEventListener("WebViewInfoJsReady", () => {
-        //         //当webViewInfoJs加载完毕添加到window对象上
-        //         //@ts-ignore
-        //         this._client = window.webViewInfoJs
-        //     }, false)
-        // }
+        if (window.webViewInfoJs) {
+            //@ts-ignore
+            this._client = window.webViewInfoJs
+        } else {
+            //1.2当webViewnInfoJs还未加载完成
+            console.log("webViewInfoJs no exist")
+            window.addEventListener("WebViewInfoJsReady", () => {
+                //当webViewInfoJs加载完毕添加到window对象上
+                //@ts-ignore
+                this._client = window.webViewInfoJs
+            }, false)
+        }
+
+        return Promise.all([p2]).then()
     }
 }
 
