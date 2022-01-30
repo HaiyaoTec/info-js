@@ -73,6 +73,7 @@ window.browserExtension : BrowserExtension
 | appIpCountry | CN | 客户端ip所在地理位置 |
 | appMode | beta｜prod | App的运行环境 |
 | viteMode | development｜build | App的运行环境 |
+|getBrowserInfo|promise|浏览器信息对象|
 
 ### example 📦
 ```ts
@@ -86,7 +87,9 @@ console.log(window.browserInfo.appPackageName)//vue-demo-web
 console.log(window.browserInfo.appVersionCode)//1.0.0
 console.log(window.browserInfo.appMode)//beta
 console.log(window.browserInfo.viteMode)//production
-
+window.getBrowserInfo().then((browserInfo)=>{
+  console.log(browserInfo.browserId)
+})
 ......
 
 console.log(window.browserExtension.language)//zh-cn
