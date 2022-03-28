@@ -87,6 +87,7 @@ console.log(window.browserInfo.appPackageName)//vue-demo-web
 console.log(window.browserInfo.appVersionCode)//1.0.0
 console.log(window.browserInfo.appMode)//beta
 console.log(window.browserInfo.viteMode)//production
+//如果同步获取浏览器信息为unkown,可以使用下面👇的方式异步获取
 window.getBrowserInfo().then((browserInfo)=>{
   console.log(browserInfo.browserId)
 })
