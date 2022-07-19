@@ -1,7 +1,8 @@
 # InfoJs ⚡
 更方便的获取客户端信息
 
-![infoJs](https://static01.imgkr.com/temp/a4132579f1c94298a3b47d8707b1ef72.png)
+![infoJs](https://tva1.sinaimg.cn/large/e6c9d24egy1h4cppjyrw2j21460983yz.jpg)
+
 ## Install 💡
 ```shell
 npm install @haiyaotec/info-js --save
